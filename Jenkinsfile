@@ -15,7 +15,7 @@ node {
     if (env.CHANGE_ID && (currentBuild.result == null || currentBuild.result == "SUCCESS")) {
         stage("Approval") {
             input message: "Test case passed. Wanna approve?", ok: "Merge"
-            echo "Now merging with GitHub"
+            
         }
     }
 }
